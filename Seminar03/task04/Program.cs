@@ -6,3 +6,36 @@
 
 
 
+
+       
+        Console.Write("Введите натуральное число (от 1 до 100000): ");
+        int inputNumber = int.Parse(Console.ReadLine());
+
+        
+        if (inputNumber < 1 || inputNumber > 100000)
+        {
+            Console.WriteLine("Число не соответствует диапазону от 1 до 100000.");
+            return;
+        }
+
+        
+        string numberString = inputNumber.ToString();
+
+        
+        int[] digitsArray = new int[numberString.Length];
+
+        
+        for (int i = 0; i < numberString.Length; i++)
+        {
+            digitsArray[i] = int.Parse(numberString[i].ToString());
+        }
+
+        
+        Console.WriteLine("Массив цифр:");
+
+        for (int i = 0; i < digitsArray.Length; i++)
+        {
+            Console.WriteLine($"digitsArray[{i}] = {digitsArray[i]}");
+        }
+    
+
